@@ -39,7 +39,20 @@ public class StringLoops
      - if origString = "Apples and bananas" this method returns "sananab dna selppA"
     */
     public String reverseString(String origString) {
+        String newString = "";
+        for(int i = origString.length() - 1; i >= 0; i--){
+            String character = origString.substring(i, i + 1);
+            newString += character;
+        }
+        return newString;
+    }
 
-        return null;
+    public String reverseString2 (String origString) {
+        String newString = "";
+        for(int i = 0; i < origString.length(); i++) {
+            String character = origString.substring(i, i + 1);
+            newString = character + newString;
+        }
+        return newString;
     }
 }
